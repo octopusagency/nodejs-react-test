@@ -5,7 +5,7 @@ function App() {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    fetch('/api')
+    fetch('/api/hello') // Updated to match the new serverless function endpoint
       .then(response => response.json())
       .then(data => setMessage(data.message));
   }, []);
